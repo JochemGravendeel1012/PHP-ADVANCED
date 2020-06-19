@@ -7,8 +7,9 @@
     <style>
         body {
             background-color: <?php echo $_POST["achtergrond"];?>;
+            color: <?php echo $_POST["tekstkleur"];?>;
         }
-        table, th, td, tr {
+        td, th {
             border: <?php echo $_POST["dikte"] ?> solid black;
             padding: <?php echo $_POST["padding"] ?>;
         }
@@ -16,18 +17,24 @@
 </head>
 <body>
     <table>
-
-        <?php
-        $gegevens = array(  "naam" => "Jochem ", 
-        "leeftijd" => "19 ", 
-        "muzieksmaak" => "hardcore ",
-        "woonplaats" => "de Kwakel ");
-        foreach($gegevens as $gegeven) {
-        ?>
-        <tr value="<?php echo $gegeven?>"><?php echo $gegeven?></tr>
-        <?php
-        }
-        ?>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+            <?php
+            $gegevens = array(  "naam" => "Jochem ", 
+                                "leeftijd" => "19 ", 
+                                "muzieksmaak" => "hardcore ",
+                                "woonplaats" => "de Kwakel ");
+            foreach($gegevens as $gegeven => $value) {
+            ?>
+            <tr>
+            <td><?php echo $gegeven;?></td>
+            <td><?php echo $value;?></td>
+            </tr>
+            <?php
+            }
+            ?>
     </table>
 </body>
 </html>

@@ -7,6 +7,17 @@
 </head>
 <body>
     <form action="advanced-2.php" name="invoerformulier" method="POST">
+        <label for="tekstkleur">Kies je tekstkleur kleur: </label>
+        <select name="tekstkleur" id="tekstkleur">
+            <?php
+            $tekstKleuren = array("red", "blue", "green", "black", "brown");
+            foreach($tekstKleuren as $tekstKleur) {
+                ?>
+            <option value="<?php echo $tekstKleur?>"><?php echo $tekstKleur ?></option>
+            <?php
+            }
+            ?>
+        </select><br>
         <label for="achtergrond">Kies je achtergrond kleur: </label>
         <select name="achtergrond" id="achtergrond">
             <?php
