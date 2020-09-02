@@ -21,20 +21,23 @@
             <th>Key</th>
             <th>Value</th>
         </tr>
+        <?php
+        function maakRij($gegeven, $value) {
+            echo" <tr>
+            <td>". $gegeven . "</td>
+            <td>".$value . "</td>
+            </tr>" ;
+        }
+        ?>
             <?php
             $gegevens = array(  "naam" => "Jochem ", 
                                 "leeftijd" => "19 ", 
                                 "muzieksmaak" => "hardcore ",
                                 "woonplaats" => "de Kwakel ");
             foreach($gegevens as $gegeven => $value) {
-            ?>
-            <tr>
-            <td><?php echo $gegeven;?></td>
-            <td><?php echo $value;?></td>
-            </tr>
-            <?php
+                maakRij($gegeven, $value);
             }
-            ?>
+                ?>
     </table>
 </body>
 </html>
